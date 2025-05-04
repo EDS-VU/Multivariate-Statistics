@@ -1,2 +1,2 @@
 # Multivariate-Statistics
-Gaussian Mixture Model Estimated with Expectation Maximization Method
+Gaussian Mixture Model Estimated by Expectation Maximization Method
