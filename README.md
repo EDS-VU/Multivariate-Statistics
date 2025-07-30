@@ -14,7 +14,7 @@ This project builds an automated “song radio” playlist of 20 tracks that are
    - Fit a 5‑component Gaussian mixture model via the Expectation–Maximization (EM) algorithm.  
    - In each EM iteration:
      - **E‑step:** Compute posterior probabilities of cluster membership for each song.  
-     - **M‑step:** Update component means, covariances, and weights to maximize expected log‑likelihood. :contentReference[oaicite:3]{index=3}
+     - **M‑step:** Update component means, covariances, and weights to maximize expected log‑likelihood. 
 3. **Cluster Interpretation**  
    - Examine component means and weights to label clusters (e.g., “energetic rock,” “mellow pop”).  
    - Visualize overlap and separation along energy vs. loudness.  
@@ -25,6 +25,6 @@ This project builds an automated “song radio” playlist of 20 tracks that are
 ## Key Findings  
 - **Dominant Cluster (30.9%)** corresponds to upbeat pop with moderate loudness and tempo.  
 - **High‑energy cluster (23.1%)** captures rock/metal tracks with strong loudness and tempo.  
-- The playlist of 20 songs (e.g., “My Life for Yours,” “Hells Bells,” “Reclamation”) reliably matches the intense, metal style of the reference. :contentReference[oaicite:4]{index=4}
+- The playlist of 20 songs (e.g., “My Life for Yours,” “Hells Bells,” “Reclamation”) reliably matches the intense, metal style of the reference. 
 
 
