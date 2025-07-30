@@ -27,9 +27,4 @@ This project builds an automated “song radio” playlist of 20 tracks that are
 - **High‑energy cluster (23.1%)** captures rock/metal tracks with strong loudness and tempo.  
 - The playlist of 20 songs (e.g., “My Life for Yours,” “Hells Bells,” “Reclamation”) reliably matches the intense, metal style of the reference. :contentReference[oaicite:4]{index=4}
 
-## Usage  
-1. Clone this repo.  
-2. Install dependencies: `pip install -r requirements.txt`  
-3. Run `generate_playlist.py --reference "Detonation"`  
-4. View the output list in `playlist.csv`.
 
