@@ -5,7 +5,7 @@
 **Course:** Multivariate Statistics, VU Amsterdam  
 
 ## Overview  
-This project builds an automated “song radio” playlist of 20 tracks that are most similar—by audio features—to a given reference song. Using a dataset of 3,090 songs (with standardized measures of danceability, energy, loudness, and tempo), we apply a Gaussian Mixture Model (GMM) to discover clusters of similar tracks and then recommend the top 20 from the same cluster as the reference.
+This project builds an automated “song radio” playlist of 20 tracks that are most similar by audio features to a given reference song. Using a dataset of 3,090 songs (with standardized measures of danceability, energy, loudness, and tempo), we apply a Gaussian Mixture Model (GMM) to discover clusters of similar tracks and then recommend the top 20 from the same cluster as the reference.
 
 ## Methodology  
 1. **Data Preparation**  
