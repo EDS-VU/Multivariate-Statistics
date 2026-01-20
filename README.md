@@ -4,27 +4,39 @@
 **Date:** March 20, 2025  
 **Course:** Multivariate Statistics, VU Amsterdam  
 
-## Overview  
-This project builds an automated “song radio” playlist of 20 tracks that are most similar by audio features to a given reference song. Using a dataset of 3,090 songs (with standardized measures of danceability, energy, loudness, and tempo), we apply a Gaussian Mixture Model (GMM) to discover clusters of similar tracks and then recommend the top 20 from the same cluster as the reference.
+## Project Summary  
+This project builds an automated “song radio” playlist of 20 tracks most similar to a given reference song, based on audio features. Using a dataset of 3,090 songs with standardized values for danceability, energy, loudness, and tempo, we apply a **Gaussian Mixture Model (GMM)** to discover latent clusters and recommend songs from the same cluster as the reference.
 
-## Methodology  
-1. **Data Preparation**  
-   - Standardize four numeric features: danceability, energy, loudness, and tempo.  
-2. **Clustering with GMM**  
-   - Fit a 5‑component Gaussian mixture model via the Expectation–Maximization (EM) algorithm.  
-   - In each EM iteration:
-     - **E‑step:** Compute posterior probabilities of cluster membership for each song.  
-     - **M‑step:** Update component means, covariances, and weights to maximize expected log‑likelihood. 
-3. **Cluster Interpretation**  
-   - Examine component means and weights to label clusters (e.g., “energetic rock,” “mellow pop”).  
-   - Visualize overlap and separation along energy vs. loudness.  
-4. **Playlist Construction**  
-   - Select a reference song (“Detonation” by Trivium), identify its most probable cluster, then rank all songs in that cluster by their posterior probabilities.  
-   - Output the top 20 as the recommended radio playlist.
+## Problem Statement  
+Music recommendation systems often rely on genre or user behavior. This project explores a **feature‑driven clustering approach** to group songs by their acoustic properties and generate a playlist that matches the style and intensity of a chosen track.
 
-## Key Findings  
-- **Dominant Cluster (30.9%)** corresponds to upbeat pop with moderate loudness and tempo.  
-- **High‑energy cluster (23.1%)** captures rock/metal tracks with strong loudness and tempo.  
-- The playlist of 20 songs (e.g., “My Life for Yours,” “Hells Bells,” “Reclamation”) reliably matches the intense, metal style of the reference. 
+## Approach  
+- **Data Standardization:** Normalize four features (danceability, energy, loudness, tempo) to zero mean and unit variance.  
+- **GMM Clustering:**  
+  - Fit a 5‑component Gaussian Mixture Model using the **Expectation–Maximization (EM)** algorithm.  
+  - EM steps:
+    - **E‑step:** Compute posterior probabilities of cluster membership.  
+    - **M‑step:** Update component parameters to maximize expected log‑likelihood.  
+- **Cluster Interpretation:**  
+  - Analyze component means and weights to label clusters (e.g., mellow pop, energetic rock).  
+  - Visualize cluster separation using energy vs. loudness scatter plot.  
+- **Playlist Construction:**  
+  - Use “Detonation” by Trivium as the reference song.  
+  - Identify its most probable cluster (Cluster 5, posterior probability ≈ 0.604).  
+  - Rank all songs in that cluster by posterior probability and select the top 20.
 
+## Results  
+- **Cluster 2 (30.9%)**: Upbeat pop songs with moderate loudness and tempo.  
+- **Cluster 3 (23.1%)**: High‑energy rock/metal tracks with strong loudness and tempo.  
+- **Cluster 5** (reference cluster): Loud, intense metal songs with slightly slower tempo.  
+- Final playlist includes tracks like:
+  - “My Life for Yours” – Killswitch Engage  
+  - “Hells Bells” – AC/DC  
+  - “Reclamation” – Lamb of God  
+  - “This Side of Fate” – Alter Bridge  
+  - “Forgotten Faces” – Avenged Sevenfold  
 
+## Key Takeaways  
+- GMM clustering provides a flexible, probabilistic way to group songs by audio features.  
+- Posterior probabilities offer a natural ranking mechanism for playlist generation.  
+- The resulting playlist successfully captures the **intensity and style** of the reference track, demonstrating the potential of unsupervised learning in music recommendation.
